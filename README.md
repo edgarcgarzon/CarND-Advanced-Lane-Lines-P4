@@ -1,8 +1,8 @@
 
 # Advance Lane Lines
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=qIsMhckhgdY
-" target="_blank"><img src="http://img.youtube.com/vi/qIsMhckhgdY/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=u9XTdT2nVkw
+" target="_blank"><img src="http://img.youtube.com/vi/u9XTdT2nVkw/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
 
 The Project
@@ -444,8 +444,8 @@ clip = clip.fl_image(pipelinePlus)
 
 ```
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=qIsMhckhgdY
-" target="_blank"><img src="http://img.youtube.com/vi/qIsMhckhgdY/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=u9XTdT2nVkw
+" target="_blank"><img src="http://img.youtube.com/vi/u9XTdT2nVkw/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
 
 
@@ -459,3 +459,19 @@ Note that the straight portion of the road is represented in the graph for a inc
 ![png](output_images/output_89_1.png)
 
 ![png](output_images/output_90_1.png)
+
+## 9. Discussion
+
+Ther are several aspect to improve in this pipeline:
+
+1. The color mask is not really accurate in situations of low contrast as the challenge video. The color mask could use other color space as RGB or HSV to identify the lane.
+
+2. The Sobel gradient does not improve the lane detection due its thresholds are too limited to avoid the introduction of noise in the picture. However, the direction or magnitude threshold could be combined to allow more wide threshold without the noise introduction.
+
+3. The perpespective transformation for the bird eye view should follow a matematical method to chose the source and destination point. The calibration of these parameters are consider as break point for the performance of the pipeline.
+
+4. The curvature calculation should be improve due with the current method there is a lot of error. One possibility could be forcing the introduction of limit data for calculating the polynomial. For instance the top and bottom points for the right line could set manually from the left points.
+
+5. The pipeline plus could be improve introducing more sanity checks and implementing better filters for the curvature and the polynomial coefficents. 
+
+6. The pipeline plus could be improve with an algorithm that detects the straight lines base on offical data (e.g. [link](http://onlinemanuals.txdot.gov/txdotmanuals/rdw/horizontal_alignment.htm#BGBHGEGC))
