@@ -441,14 +441,10 @@ def pipelinePlus(img):
 
 ```python
 clip = clip.fl_image(pipelinePlus)
-
 ```
-
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=u9XTdT2nVkw
 " target="_blank"><img src="http://img.youtube.com/vi/u9XTdT2nVkw/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
-
-
 
 ### 8.5 Curvature log
 
@@ -474,4 +470,4 @@ Ther are several aspect to improve in this pipeline:
 
 5. The pipeline plus could be improve introducing more sanity checks and implementing better filters for the curvature and the polynomial coefficents. 
 
-6. The pipeline plus could be improve with an algorithm that detects the straight lines base on offical data (e.g. [link](http://onlinemanuals.txdot.gov/txdotmanuals/rdw/horizontal_alignment.htm#BGBHGEGC))
+6. The pipeline plus could be improve with an algorithm that detects the straight lines base on offical data.
